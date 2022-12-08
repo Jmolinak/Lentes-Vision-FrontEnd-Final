@@ -1,0 +1,38 @@
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+    {{user.fullName}}
+
+
+    <div class=" rounded border-dark " [matMenuTriggerFor]='menu' >
+      <img class ="img-circle img-fluid rounded-circle border border-3" [src]="profile?.photoProfile" width="50">
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item (click)="fileInput.click()">
+        <mat-icon>imagePublication</mat-icon>
+        <span>Cambiar Foto</span>
+      </button>
+      <input hidden #fileInput accept="image/*" type="file" id="myFile" name="filename" (change)="changePhoto($event)">
+
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+
+
+      </button>
+    </mat-menu>
+    <!-- <button mat-raised-button class="m-2" (click)="logout()">cerrar sesion</button>-->
+  </mat-toolbar>

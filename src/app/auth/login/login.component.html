@@ -1,0 +1,42 @@
+<!-- Section: Design Block -->
+
+
+  <div class="d-flex vh-100 justify-content-center align-items-center  ">
+  <div class="conainer d-flex px-2">
+
+    <div class="row vh-100 justify-content-center align-items-center">
+      
+      <div class="row justify-content-center align-items-center shadow bg-body rounded">
+        <div class="texto text-center mt-2"> 
+          <h2>login</h2>
+        </div>
+        <div class="col-4 ">
+          <div class="mt-2 mb-3 border border-dark rounded">
+            <img src="https://res.cloudinary.com/det18fdki/image/upload/v1670013245/foo/n1yx82icdjyf2jjhsxef.jpg" alt="Trendy Pants and Shoes"
+              class="img-fluid mx-auto rounded shadow" />
+          </div>
+        </div>
+
+        <div class="col-4 mb-5">
+          <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="row mb-2">
+            <input type="email" id="form2Example1" class="form-control" formControlName="email" />
+            <label class="form-label" for="form2Example1">Email address</label>
+          </div>
+
+          <div class="row mb-2">
+
+            <input type="password" id="form2Example2" class="form-control" formControlName="password" />
+            <label class="form-label" for="form2Example2">Password</label>
+          </div>
+
+<a href="../signup"> registrat</a>
+          <div class="row">
+            <button mat-raised-button color="primary">Login</button>
+          </div>
+        </form>
+        </div>
+        <div class="row mt-3"></div>
+      </div>
+    </div>
+  </div>
