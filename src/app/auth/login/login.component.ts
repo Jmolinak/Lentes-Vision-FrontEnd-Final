@@ -50,8 +50,8 @@ export class LoginComponent implements OnInit {
           console.log(usuar.Rolle)
           console.log('******************************************************')
           if (usuar.Rolle == 'Admin') {
-            this.router.navigate(['/signup']);
-          }else{
+            this.router.navigate(['/admin']);
+          } else {
             this.router.navigate(['/']);
           }
           //Redireccion a login Con Alerta
