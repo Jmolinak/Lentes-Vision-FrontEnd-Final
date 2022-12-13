@@ -13,7 +13,6 @@ export class TokenStorageService {
 
   constructor(private http: HttpClient) { }
 
-
   public getUser() {
     const token = window.sessionStorage.getItem(TOKEN_KEY);
     //console.log("este es el token del usuario " + token)
@@ -42,11 +41,7 @@ export class TokenStorageService {
   
   verifyToken() {
     const token = this.getToken();
-    console.log('En el verifytoken frontend')
-    //console.log({token})
-    
-
-    return this.http.post(` ${environment.apiUrl}/api/auth/authVerification`,{token})
+   return this.http.post(` ${environment.apiUrl}/api/auth/authVerification`,{token})
  
   }
 }
