@@ -1,0 +1,102 @@
+<form class="example-form bd formula" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="p-3 mb-2 mt-5 bg-light text-dark container-fluid justify-content-center align-items-center d-flex">
+        <div class="border border-primary mb-2">
+            <div class="row">
+                <div class="col">
+                    <p class="derecho mt-5 mx-5">Ojo Derecho</p>
+                    <p class="izquierdo my-5 mx-5">Ojo Izquierdo</p>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <mat-form-field class="example-full-width mt-5">
+                            <mat-label>Esfera Derecha</mat-label>
+                            <input matInput placeholder="Esfera derecha" type=number value="+/-00.00"
+                                formControlName="esfRight">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Esfera Izquierda</mat-label>
+                            <input matInput placeholder="Esfera Izquierda" type=number value="+/-00.00"
+                                formControlName="esfLeft">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <mat-form-field class="example-full-width mt-5">
+                            <mat-label>Cilindro Derecho</mat-label>
+                            <input matInput placeholder="Cilindro Derecho" type=number value="-00.00"
+                                formControlName="cylRight">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Cilindro Izquierdo</mat-label>
+                            <input matInput placeholder="Cilindro Izquierdo" type=number value="-00.00"
+                                formControlName="cylLeft">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <mat-form-field class="example-full-width mt-5">
+                            <mat-label>Eje Derecho</mat-label>
+                            <input matInput placeholder="Eje Derecho" type=number value="00°"
+                                formControlName="axisRight">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Eje Izquierdo</mat-label>
+                            <input matInput placeholder="Eje Izquierdo" type=number value="00°"
+                                formControlName="axisLeft">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <mat-form-field class="example-full-width mt-5 ml-5">
+                            <mat-label>DNP Derecho</mat-label>
+                            <input matInput placeholder="DNP Derecho" type=number value="" formControlName="dnpRight">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width ml-5">
+                            <mat-label>DNP Izquierdo</mat-label>
+                            <input matInput placeholder="DNP Izquierdo" type=number value="" formControlName="dnpLeft">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <section>
+        <div class="example-label"></div>
+        <div
+            class="example-button-row container-fluid justify-content-center align-items-center d-flex p-3 mb-2 bg-light text-dark">
+            <button mat-raised-button color="primary" class="aceptar">Aceptar</button>
+        </div>
+    </section>
+
+</form>
+
+
+<h1
+    class="SeleccionaTuLente container-fluid justify-content-center align-items-center d-flex p-3 mb-2 bg-light text-dark">
+    Selecciona tu lente</h1>
+<mat-form-field appearance="fill"
+    class="selectLentes container-fluid justify-content-center align-items-center d-flex p-3 mb-2 bg-light text-dark">
+    <mat-label>Tipos de lentes</mat-label>
+    <mat-select input [(ngModel)]="material">
+        <mat-option *ngFor="let lente of filterLentes" [value]="lente.material + ' ' + lente.tipo">
+            {{lente.material}} {{lente.tipo}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<section>
+    <div class="example-label"></div>
+    <div
+        class="example-button-row container-fluid justify-content-center align-items-center d-flex p-3 mb-2 bg-light text-dark">
+        <button mat-raised-button (click)="onClick()" color="primary" class="aceptar">Aceptar</button>
+    </div>
+</section>
