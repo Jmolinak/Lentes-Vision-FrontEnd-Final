@@ -9,6 +9,7 @@ import { ReportesService } from '../_services/reportes.service';
 export class AdminComponent implements OnInit {
   body: any;
   bodypqrs:any
+  bodyContac:any
   constructor(
     private srvImpresion: ReportesService
   ) { }
@@ -26,6 +27,13 @@ export class AdminComponent implements OnInit {
         console.log(data)
         this.bodypqrs = data;
       }
+    });
+
+    this.srvImpresion.consultarContactenos().subscribe({
+      next: (data) => {
+        console.log(data)
+        this.bodyContac = data;
+      }
     })
   }
 
@@ -41,7 +49,7 @@ export class AdminComponent implements OnInit {
   }
 
   onImprimirPQRS():void{
-     
+     ///por corregir
     console.log("imprimiendo")
     const encabezado = [ "Nombre", "axisLeft", "axisRight", "cylLeft","cylRight","dnpLeft","dnpRight","esfLeft","esfRight","Material"];
     const cuerpoArray = this.bodypqrs.map((element: any) => {
@@ -52,4 +60,18 @@ export class AdminComponent implements OnInit {
     this.srvImpresion.imprimir(encabezado, cuerpoArray, "Reporte de PQRS","PQRS" ,true);
   
   }
+
+  onImprimirContactenos():void{
+    ///por corregir
+   console.log("imprimiendo")
+   const encabezado = [ "Nombre", "Apellido", "Correo", "Telefono","Comentarios"];
+   const cuerpoArray = this.bodyContac.map((element: any) => {
+     return [element.Nombre,element.Apellido, element.Correo,element.Telefono,element.Comentarios]
+   })
+
+   this.srvImpresion.imprimir(encabezado, cuerpoArray, "Reporte de Contactenos","Contactenoa" ,true);
+ 
+ }
+
+
 }

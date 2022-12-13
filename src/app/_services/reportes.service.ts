@@ -48,4 +48,9 @@ consultarPQRS(){
   return resultado;
 }
 
+consultarContactenos(){
+  const resultado= this.http.post(`${environment.apiUrl}/api/reporteFormulas/getContactenos`,{})
+  return resultado;
+}
+
 }
