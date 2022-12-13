@@ -5,6 +5,7 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { AuthGuard } from './_helpers/auth.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+
 const routes: Routes = [{
   path: '',
   component: LentesvisionLayoutComponent,
@@ -19,6 +20,11 @@ const routes: Routes = [{
       path: 'profile',
       loadChildren: () =>
         import('./profile/profile.module').then((m) => m.ProfileModule),
+    },
+    {
+      path: 'contactenos',
+      loadChildren: () =>
+        import('./contactenos/contactenos.module').then((m) => m.ContactenosModule),
     },
   ]
 },
