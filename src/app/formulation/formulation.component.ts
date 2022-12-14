@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { FormulationService } from '../_services/formulation.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulation',
@@ -109,8 +110,19 @@ export class FormulationComponent implements OnInit {
     this.form.patchValue({ materialLen: this.material })
     console.log(this.form.value)
     this.formulationService.saveFormulation(this.form.value).subscribe({
-      next: (data: any) => {
-        console.log(data)
+      next: (response: any) => {
+
+        console.log(response)
+        const data = response.data
+        Swal.fire({
+          title: '<strong>GRACIAS POR TU COMPRA</strong>',
+          html:
+            'Tu ticket de compra es:  ' + data._id +
+            ', Tu lente es: . ' + data.Nombre +
+            ', Por favor consigna al Nequi 324 402 7687 el siguiente monto:' + data.valor + ' pesos y envía el pantallazo de tu consignación al mismo número por whatsapp, ' +
+            'Recuerda enviarnos tu montura a Cra. 13 #54-55 en Bogotá a través de Servientrega o interapidísimo, tus gafas volveran a ti en 5 días hábiles',
+
+        })
       }
     })
   }
