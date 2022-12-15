@@ -12,7 +12,7 @@ export class ReportesService {
   constructor(private http: HttpClient) { }
 
 
-  imprimir(encabezado: string[], cuerpo: Array<any>, titulo: string, guardar?: boolean) {
+  imprimir(encabezado: string[], cuerpo: Array<any>, titulo: string, Name:string, guardar?: boolean) {
     console.log('En el cuerpo')
     console.log(cuerpo)
     console.log('En final del cuerpo')
@@ -31,7 +31,7 @@ export class ReportesService {
     })
     if (guardar) {
       const hoy = new Date();
-      doc.save(hoy.getDate() + hoy.getMonth() + hoy.getFullYear() + hoy.getTime() + '.pdf');
+      doc.save(hoy.getDate() + hoy.getMonth() + hoy.getFullYear() + hoy.getTime() + Name+'.pdf');
     } else {
       null;
     }
@@ -40,6 +40,16 @@ consultarFormulas(){
  // console.log(`${environment.apiUrl}/api/reporteFormulas/getFormulas`)
   const resultado= this.http.post(`${environment.apiUrl}/api/reporteFormulas/getFormulas`,{})
   //console.log(resultado)
+  return resultado;
+}
+
+consultarPQRS(){
+  const resultado= this.http.post(`${environment.apiUrl}/api/reporteFormulas/getPQRS`,{})
+  return resultado;
+}
+
+consultarContactenos(){
+  const resultado= this.http.post(`${environment.apiUrl}/api/reporteFormulas/getContactenos`,{})
   return resultado;
 }
 

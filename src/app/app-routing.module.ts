@@ -22,9 +22,15 @@ const routes: Routes = [{
         import('./profile/profile.module').then((m) => m.ProfileModule),
     },
     {
+<<<<<<< HEAD
       path: 'pqrs',
       loadChildren: () =>
         import('./pqrs/pqrs.module').then((m) => m.PqrsModule),
+=======
+      path: 'formulation',
+      loadChildren: () =>
+        import('./formulation/formulation.module').then((m) => m.FormulationModule),
+>>>>>>> origin
     },
   ]
 },

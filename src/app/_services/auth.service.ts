@@ -13,12 +13,29 @@ export class AuthService {
     token: this.tokenservice.getToken()!,
   });
 
+<<<<<<< HEAD
   constructor(private http: HttpClient, private tokenservice: TokenStorageService) { }
 
+=======
+>>>>>>> origin
   signup(account: any) {
     console.log("En el signUp");
     console.log(environment.apiUrl);
     return this.http.post(`${environment.apiUrl}/api/accounts/newAccount`, account)
+<<<<<<< HEAD
+=======
+
+  }
+  login(account: any) {
+    console.log("En el login Service");
+    return this.http.post(`${environment.apiUrl}/api/auth/login`, account)
+
+  }
+  formulation(account: any) {
+    console.log("En el formulation");
+    console.log(environment.apiUrl);
+    return this.http.post(`${environment.apiUrl}/api/regFormula/RegistrarFormula`, account)
+>>>>>>> origin
 
   }
   login(account: any) {
