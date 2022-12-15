@@ -12,11 +12,6 @@ let usuar = {
   Email: '',
   iat: ''
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/william
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

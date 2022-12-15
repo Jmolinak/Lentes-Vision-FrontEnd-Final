@@ -5,10 +5,6 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { AuthGuard } from './_helpers/auth.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AdminComponent } from './admin/admin.component';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/william
 
 const routes: Routes = [{
   path: '',
@@ -26,18 +22,17 @@ const routes: Routes = [{
         import('./profile/profile.module').then((m) => m.ProfileModule),
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       path: 'pqrs',
       loadChildren: () =>
         import('./pqrs/pqrs.module').then((m) => m.PqrsModule),
-=======
+    },{
       path: 'formulation',
       loadChildren: () =>
         import('./formulation/formulation.module').then((m) => m.FormulationModule),
->>>>>>> origin
+
     },
-=======
+  {
       path: 'contactenos',
       loadChildren: () =>
         import('./contactenos/contactenos.module').then((m) => m.ContactenosModule),
@@ -48,7 +43,7 @@ const routes: Routes = [{
         import('./admin/admin.module').then((m) => m.AdminModule),
     },
    
->>>>>>> origin/william
+
   ]
 },
 {
@@ -62,7 +57,6 @@ const routes: Routes = [{
     },
 
   ]
-<<<<<<< HEAD
 },
 
 {
@@ -72,11 +66,11 @@ const routes: Routes = [{
 {
   path: '**', component: PageNotFoundComponent
 },
-=======
-}, 
 
-{ path: '**', component: PageNotFoundComponent },
->>>>>>> origin/william
+
+
+
+
 ];
 
 @NgModule({

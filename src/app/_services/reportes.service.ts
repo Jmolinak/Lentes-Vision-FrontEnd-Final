@@ -53,8 +53,7 @@ consultarContactenos(){
   return resultado;
 }
 
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/william
+
+

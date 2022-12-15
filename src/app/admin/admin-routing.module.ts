@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [{
-<<<<<<< HEAD
+
   path:'',
-=======
-  path: '',
->>>>>>> origin/william
+
+
+
   component:AdminComponent,
 }];
 
