@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
-
-
-
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -18,10 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
   ],
   imports: [
     CommonModule,
-
     AdminRoutingModule,
-
-   
     MatButtonModule
   ]
 })
