@@ -1,0 +1,41 @@
+npm i nodemon
+npm i express
+npm i body-parser
+npm i mongodb@latest
+
+const express = require('express');
+const { getData } = require ('./db');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get ('/ejercicio1', async (req,res) => {
+    const data = await getData();
+    console.log(data);
+    res.send(data);
+})
+
+app.listen(port, () => {
+    console.log(`Escuchando por el puerto ${port}`);
+});
+
+
+
+
+const { MongoClient } = require("mongodb");
+
+const uri = 'mongodb+srv://FerchoDrone:Gmail79057593@cluster0.hymzxbs.mongodb.net/?retryWrites=true&w=majority';
+
+const client = new MongoClient(uri);
+
+
+const getData = async () => {
+    const dataBase = client.db('sample_airbnb');
+    const objeto = dataBase.collection('listingsAndReviews');
+    const result = await objeto.find({ bathrooms: {$gte: 2}}).limit(50).toArray();
+    return result
+};
+
+module.exports = {getData};
