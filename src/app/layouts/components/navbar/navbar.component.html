@@ -1,16 +1,31 @@
-  <mat-toolbar>
+<div class="pf1">
+  <MARQUEE style="background-image: url(https://img.freepik.com/foto-gratis/desenfoque-lujo-abstracto-gradiente-color-gris-utilizado-como-pared-estudio-fondo-exhibir-sus-productos_1258-71462.jpg?w=2000);" WIDTH=100% HEIGHT=20 ALIGN=BOTTOM>
+    <a style="margin:100px ;">¡Envíos gratuitos!</a>
+    <a style="margin:100px ;">¡Promociones en toda Colombia!</a>
+    <a style="margin:100px ;">¡Descuento en tu primera compra!</a>
+    <a style="margin:100px ;">¡Devoluciones gratuitas!</a>
+  
+  </MARQUEE>
+  </div>
+  
+  <mat-toolbar >
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
+    <span><a routerLink="" style="text-align: center; font-family: 'Quicksand', sans-serif; text-decoration: double; font-size: 25px; text-decoration: none; color: black;">Inicio</a></span>
+    <span class="example-spacer"></span>
+    <span><a routerLink=""style="text-align: center; font-family: 'Quicksand', sans-serif; text-decoration: double; font-size: 25px; text-decoration: none; color: black;">Ubicación</a></span>
+    <span class="example-spacer"></span>
+    <span><a routerLink=""style="text-align: center; font-family: 'Quicksand', sans-serif; text-decoration: double; font-size: 25px; text-decoration: none; color: black;"> Contacto</a></span>
+    <span class="example-spacer"></span>
+    <span><a routerLink="" style="text-align: center; font-family: 'Quicksand', sans-serif; text-decoration: double; font-size: 25px; text-decoration: none; color: black;">PQRS</a></span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
     </button>
+    <div class="m-3">
     {{user.fullName}}
+  </div>
 
 
     <div class=" rounded border-dark " [matMenuTriggerFor]='menu' >
