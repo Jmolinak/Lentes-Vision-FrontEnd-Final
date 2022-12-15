@@ -13,15 +13,15 @@ export class PqrsComponent implements OnInit {
   constructor(private fb: FormBuilder, private pqrsService: PqrsService) { }
 
   form = this.fb.group({
-    nombre: [''],
-    apellido: ['',],
-    direccion: ['',],
-    departamento: ['', ],
-    Documento_de_identidad: ['-Ninguno-',],
-    N_doc_identidad: ['', ],
-    correo_electronico: ['', ],
-    Telefono_alternativo: ['', ],
-    descripcion: ['', ]
+    Nombre: [''],
+    Apellido: ['',],
+    Direccion: ['',],
+    Departamento: ['', ],
+    TipoDocIdent: ['-Ninguno-',],
+    DocumentoID: ['', ],
+    Correo: ['', ],
+    Telefono: ['', ],
+    Descripcion: ['', ]
   })
 
   ngOnInit(): void {
