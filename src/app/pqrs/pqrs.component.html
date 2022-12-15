@@ -1,0 +1,105 @@
+<div class="todo">
+    <h1 class="text-center">Libro de Reclamaciones</h1>
+
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+        <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Nombre * ↓</label>
+                <br>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label></mat-label>
+                        <input matInput placeholder="" value="" formControlName="Nombre">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Apellido * ↓</label>
+                <br>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label></mat-label>
+                        <input matInput placeholder="" value="" formControlName="Apellido">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Dirección * ↓</label>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label></mat-label>
+                        <input matInput placeholder="" value="" formControlName="Direccion">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Departamento * ↓</label>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label></mat-label>
+                        <input matInput placeholder="" value="" formControlName="Departamento">
+                    </mat-form-field>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="mb-4">Documento de Identidad * ↓</label>
+
+                <select class="form-control" formControlName="TipoDocIdent" >
+                    <option>-Ninguno-</option>
+                    <option value="C.C.">C.C.</option>
+                    <option value="C.E.">C.E.</option>
+                    <option value="Menor de edad">T.I</option>
+                    <option value="Salvo conducto">Salvo conducto</option>
+                    <option value="pasaporte">pasaporte</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>N doc. Identidad * ↓</label>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label></mat-label>
+                        <input matInput placeholder="" value="" formControlName="DocumentoID">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Correo electrónico * ↓</label>
+                <br>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="" value="" formControlName="Correo">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group row col">
+                <label>Télefono alternativo * ↓</label>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label></mat-label>
+                    <span matPrefix>+57 &nbsp;</span>
+                    <input type="tel" matInput placeholder="123-456 7890" formControlName="Telefono">
+                    <mat-icon matSuffix></mat-icon>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group row col">
+                <label>Descripción ↓</label>
+                <br>
+                <mat-form-field class="example-full-width">
+                    <mat-label>comentarios </mat-label>
+                    <textarea matInput placeholder="Escriba su ejemplo aqui" formControlName="Descripcion"></textarea>
+                </mat-form-field>
+
+                <button class="row col" mat-raised-button color="primary">Enviar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

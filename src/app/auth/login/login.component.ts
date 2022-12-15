@@ -12,14 +12,19 @@ let usuar = {
   Email: '',
   iat: ''
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/william
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
+Login: any;
 
   constructor(private fb: FormBuilder,
     private authService: AuthService,
