@@ -21,6 +21,11 @@ const routes: Routes = [{
       loadChildren: () =>
         import('./profile/profile.module').then((m) => m.ProfileModule),
     },
+    {
+      path: 'pqrs',
+      loadChildren: () =>
+        import('./pqrs/pqrs.module').then((m) => m.PqrsModule),
+    },
   ]
 },
 {
