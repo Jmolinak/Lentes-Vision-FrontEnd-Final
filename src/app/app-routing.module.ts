@@ -4,6 +4,8 @@ import { LentesvisionLayoutComponent } from './layouts/lentesvision-layout/lente
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 const routes: Routes = [{
   path: '',
@@ -20,6 +22,17 @@ const routes: Routes = [{
       loadChildren: () =>
         import('./profile/profile.module').then((m) => m.ProfileModule),
     },
+    {
+      path: 'contactenos',
+      loadChildren: () =>
+        import('./contactenos/contactenos.module').then((m) => m.ContactenosModule),
+    },
+    {
+      path: 'admin',
+      loadChildren: () =>
+        import('./admin/admin.module').then((m) => m.AdminModule),
+    },
+   
   ]
 },
 {
@@ -33,8 +46,9 @@ const routes: Routes = [{
     },
 
   ]
-}
-  , { path: '**', component: PageNotFoundComponent },
+}, 
+
+{ path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

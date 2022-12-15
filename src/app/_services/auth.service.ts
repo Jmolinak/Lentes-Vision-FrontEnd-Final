@@ -8,6 +8,12 @@ import { HttpClient } from '@angular/common/http'
 export class AuthService {
 
   constructor(private http: HttpClient) { }
+  
+  contactenos(account:any) {
+    console.log("En los contactenos");
+    console.log(environment.apiUrl);
+    return this.http.post(`${environment.apiUrl}/api/contact/contactenos`,account)
+  }
 
   signup(account:any) {
     console.log("En el signUp");

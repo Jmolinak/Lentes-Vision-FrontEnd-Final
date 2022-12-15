@@ -13,12 +13,13 @@ export class TokenStorageService {
 
   constructor(private http: HttpClient) { }
 
-
   public getUser() {
     const token = window.sessionStorage.getItem(TOKEN_KEY);
-    console.log("este es el token del usuario " + token)
+    //console.log("este es el token del usuario " + token)
     const usr = jwt_decode(token!);
-    console.log(usr)
+    //console.log("///////////////////////////////////////")
+    //console.log(usr)
+    //console.log("///////////////////////////////////////")
     return usr;
   }
   public logout() {
@@ -37,10 +38,10 @@ export class TokenStorageService {
   getToken() {
     return window.sessionStorage.getItem(TOKEN_KEY)  
   }
+  
   verifyToken() {
     const token = this.getToken();
-    console.log('En el verifytoken frontend')
-    console.log({token})
-    return this.http.post(` ${environment.apiUrl}/api/auth/authVerification`,{token})
+   return this.http.post(` ${environment.apiUrl}/api/auth/authVerification`,{token})
+ 
   }
 }

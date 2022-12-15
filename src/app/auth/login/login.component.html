@@ -1,42 +1,62 @@
 <!-- Section: Design Block -->
-
-
+<body>
   <div class="d-flex vh-100 justify-content-center align-items-center  ">
-  <div class="conainer d-flex px-2">
-
-    <div class="row vh-100 justify-content-center align-items-center">
-      
-      <div class="row justify-content-center align-items-center shadow bg-body rounded">
-        <div class="texto text-center mt-2"> 
-          <h2>login</h2>
+    <div class="conainer d-flex px-2">
+  
+      <div class="row vh-100 justify-content-center align-items-center">
+  
+        <div class="row justify-content-center align-items-center shadow bg-body rounded">
+          <div class="texto text-center mt-2">
+            <h2>Login</h2>
+          </div>
+          <div class="col-4 ">
+            <div class="mt-2 mb-3 border border-dark rounded">
+              <img src="https://res.cloudinary.com/det18fdki/image/upload/v1670013245/foo/n1yx82icdjyf2jjhsxef.jpg"
+                alt="Trendy Pants and Shoes" class="img-fluid mx-auto rounded shadow" />
+            </div>
+          </div>
+  
+          <div class="col-4 mb-5">
+            <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="row mb-2">
+                <input type="email" id="form2Example1" class="form-control" formControlName="email" />
+                <label class="form-label" for="form2Example1">Email address</label>
+              </div>
+  
+              <div class="row mb-2">
+  
+                <input type="password" id="form2Example2" class="form-control" formControlName="password" />
+                <label class="form-label" for="form2Example2">Password</label>
+              </div>
+  
+              <a href="../signup"> Registrarse</a>
+              <div class="row">
+                <button mat-raised-button color="primary">Login</button>
+              </div>
+              <div style="margin-top: 4px;" class="btn d-flex gap-2 justify-content-center border">
+                <img style="height: 1.6rem;"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1024px-Google_Chrome_icon_%28February_2022%29.svg.png"
+                  alt="google-icon">
+                <div>Continuar con Chrome</div>
+              </div>
+              <div style="margin-top: 4px;" class="btn d-flex gap-2 justify-content-center border">
+                <img style="height: 1.6rem;"
+                  src="https://thumbs.dreamstime.com/b/facebook-logo-vector-original-%C3%BAltimo-color-azul-aislado-f-icono-para-la-aplicaci%C3%B3n-m%C3%B3vil-de-p%C3%A1gina-web-o-materiales-impresi%C3%B3n-204672012.jpg"
+                  alt="facebook-icon">
+                <div>Continuar con Facebook</div>
+              </div>
+  
+              <div style="margin-top: 4px;" class="btn d-flex gap-2 justify-content-center border">
+                <img style="height: 1.6rem;" src="https://i.pinimg.com/736x/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.jpg"
+                  alt="instagram-icon">
+                <div>Continuar con instagram</div>
+              </div>
+            </form>
+          </div>
+          <div class="row mt-3"></div>
         </div>
-        <div class="col-4 ">
-          <div class="mt-2 mb-3 border border-dark rounded">
-            <img src="https://res.cloudinary.com/det18fdki/image/upload/v1670013245/foo/n1yx82icdjyf2jjhsxef.jpg" alt="Trendy Pants and Shoes"
-              class="img-fluid mx-auto rounded shadow" />
-          </div>
-        </div>
-
-        <div class="col-4 mb-5">
-          <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
-          <div class="row mb-2">
-            <input type="email" id="form2Example1" class="form-control" formControlName="email" />
-            <label class="form-label" for="form2Example1">Email address</label>
-          </div>
-
-          <div class="row mb-2">
-
-            <input type="password" id="form2Example2" class="form-control" formControlName="password" />
-            <label class="form-label" for="form2Example2">Password</label>
-          </div>
-
-<a href="../signup"> registrat</a>
-          <div class="row">
-            <button mat-raised-button color="primary">Login</button>
-          </div>
-        </form>
-        </div>
-        <div class="row mt-3"></div>
       </div>
     </div>
   </div>
+</body>
+

@@ -5,14 +5,22 @@ import { AuthService } from '../../_services/auth.service';
 import { TokenStorageService } from '../../_services/token-storage.service';
 import { Router } from '@angular/router';
 
-
+let usuar = {
+  _id: '',
+  fullName: '',
+  Rolle: '',
+  Email: '',
+  iat: ''
+}
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
+Login: any;
 
   constructor(private fb: FormBuilder,
     private authService: AuthService,
@@ -34,7 +42,18 @@ export class LoginComponent implements OnInit {
         next: (data: any) => {
           console.log(data.token);
           this.tokenService.saveToken(data.token);
-          this.router.navigate(['/']);
+
+          const myUsuar = JSON.parse(JSON.stringify(this.tokenService.getUser()));
+
+          console.log('******************************************************')
+          usuar = myUsuar;
+          console.log(usuar.Rolle)
+          console.log('******************************************************')
+          if (usuar.Rolle == 'Admin') {
+            this.router.navigate(['/admin']);
+          } else {
+            this.router.navigate(['/']);
+          }
           //Redireccion a login Con Alerta
           //this.router.navigate(['../login'])
         },
