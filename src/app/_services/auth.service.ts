@@ -9,9 +9,19 @@ import { TokenStorageService } from './token-storage.service';
 })
 export class AuthService {
 
+<<<<<<< HEAD
   header = new HttpHeaders({
     token: this.tokenservice.getToken()!,
   });
+=======
+  constructor(private http: HttpClient) { }
+  
+  contactenos(account:any) {
+    console.log("En los contactenos");
+    console.log(environment.apiUrl);
+    return this.http.post(`${environment.apiUrl}/api/contact/contactenos`,account)
+  }
+>>>>>>> origin/william
 
 <<<<<<< HEAD
   constructor(private http: HttpClient, private tokenservice: TokenStorageService) { }
