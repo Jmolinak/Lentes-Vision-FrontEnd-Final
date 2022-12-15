@@ -1,28 +1,31 @@
 
-<body>
-    <div class="row justify-content-center align-items-center shadow bg-body rounded mx-5">
-        <div class=" example-button-row">
-            <div class="form-group">
-                <div class="col-md-12 text-center mt-5">
-                    <button mat-raised-button color="primary" (click)="onImprimir()" >Imprimir Fórmulas</button>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <div class="col-md-12 text-center mt-5  mb-5">
-                    <button  mat-raised-button color="primary" (click)="onImprimirContactenos()">Reporte Contactenos</button>
-                </div>
-            </div>
-            
-        </div>
-    </div> 
-</body>
+
+    <div class="container justify-content-center shadow-lg">
+
+
+        <mat-grid-list cols="4" rowHeight="100px">
+            <mat-grid-tile class="pf3" colspan="4" rowspan="5">
+
+                <img src="https://images.eyeglasses.com/site/homepage/8-5-22/hero-animation.gif" width="100%"
+                    height="100%" alt="">
+
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+        <mat-grid-list cols="4" rowHeight="20">
+            <mat-grid-tile class="pf3" colspan="4" rowspan="5">
+
+                <button mat-raised-button color="primary" (click)="onImprimir()">Imprimir Fórmulas</button>
+                <button mat-raised-button color="primary" (click)="onImprimirContactenos()">Reporte Contactenos</button>
+                <button mat-raised-button color="primary" (click)="onImprimirPQRS()">Reporte Contactenos</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+
+    </div>
 
 
 
 
-
-
-
-
->>>>>>> origin/william

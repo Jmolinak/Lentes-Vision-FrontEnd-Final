@@ -1,43 +1,55 @@
-<body>
-    <h5> Registrarse</h5>
-<div class="container justify-content-center align-items-center">
-    <div class="row">
-        <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
-    
-            <div class="row">
-                <mat-form-field class="example-full-width">
-                    <mat-label>Nombre Completo</mat-label>
-                    <input matInput placeholder="" value="" formControlName="fullName">
-                    <mat-error>
-                        El Nombre es requerido
-                    </mat-error>
-                </mat-form-field>
-            </div>
-            <div class="row">
-                <mat-form-field class="example-full-width">
-                    <mat-label>Email</mat-label>
-                    <input type="email" matInput placeholder="" value="" formControlName="email">
-                    <mat-error>
-                        El Correo No es Valido
-                    </mat-error>
-                </mat-form-field>
-            </div>
-            <div class="row">
-                <mat-form-field class="example-full-width">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" value="" type="Password" formControlName="password">
-                    <mat-error>
-                        La contraseña es requerida
-                    </mat-error>
-                </mat-form-field>
-            </div>
-            <div class="d-grid gap-2">
-                <button class="m-auto" mat-raised-button color="primary">Registrar</button>
-            </div>
-    
-        </form>
-    
-    </div>
-</div>
+<div class="container justify-content-center shadow-lg">
 
-</body>
+
+    <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile class="pf3" colspan="4" rowspan="5">
+
+            <img src="https://images.eyeglasses.com/site/homepage/8-5-22/hero-animation.gif" width="100%" height="100%"
+                alt="">
+
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+    <h5> Registrarse</h5>
+    <div class="container justify-content-center align-items-center">
+        <div class="row">
+            <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Nombre Completo</mat-label>
+                        <input matInput placeholder="" value="" formControlName="fullName">
+                        <mat-error>
+                            El Nombre es requerido
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput placeholder="" value="" formControlName="email">
+                        <mat-error>
+                            El Correo No es Valido
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="" value="" type="Password" formControlName="password">
+                        <mat-error>
+                            La contraseña es requerida
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="m-auto" mat-raised-button color="primary">Registrar</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

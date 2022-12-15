@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ReportesService } from '../_services/reportes.service';
 
 @Component({
@@ -52,10 +53,12 @@ export class AdminComponent implements OnInit {
 
      ///por corregir
     console.log("imprimiendo")
-    const encabezado = [ "Nombre", "axisLeft", "axisRight", "cylLeft","cylRight","dnpLeft","dnpRight","esfLeft","esfRight","Material"];
+
+
+    const encabezado = [ "Nombre", "Apellido", "Direccion", "Departamento","Num documento","Tipo de Documento","Correo","Telefono","Comentario"];
     const cuerpoArray = this.bodypqrs.map((element: any) => {
-      return [element.paciente,element.axisLeft, element.axisRight,element.cylLeft,element.cylRight,
-        element.dnpLeft,element.dnpRight,element.esfLeft,element.esfRight,element.materialLen]
+      return [element.paciente,element.Apellido, element.Direccion,element.Departamento,element.DocumentoID,
+        element.TipoDocIdent,element.Correo,element.Telefono,element.Descripcion]
     })
 
     this.srvImpresion.imprimir(encabezado, cuerpoArray, "Reporte de PQRS","PQRS" ,true);
