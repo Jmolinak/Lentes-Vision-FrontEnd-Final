@@ -9,15 +9,21 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  signup(account:any) {
+  signup(account: any) {
     console.log("En el signUp");
     console.log(environment.apiUrl);
-    return this.http.post(`${environment.apiUrl}/api/accounts/newAccount`,account)
-    
+    return this.http.post(`${environment.apiUrl}/api/accounts/newAccount`, account)
+
   }
-  login(account:any){
+  login(account: any) {
     console.log("En el login Service");
-    return this.http.post(`${environment.apiUrl}/api/auth/login`,account)
+    return this.http.post(`${environment.apiUrl}/api/auth/login`, account)
+
+  }
+  formulation(account: any) {
+    console.log("En el formulation");
+    console.log(environment.apiUrl);
+    return this.http.post(`${environment.apiUrl}/api/regFormula/RegistrarFormula`, account)
 
   }
 }

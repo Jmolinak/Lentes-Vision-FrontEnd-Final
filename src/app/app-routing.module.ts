@@ -21,6 +21,11 @@ const routes: Routes = [{
       loadChildren: () =>
         import('./profile/profile.module').then((m) => m.ProfileModule),
     },
+    {
+      path: 'formulation',
+      loadChildren: () =>
+        import('./formulation/formulation.module').then((m) => m.FormulationModule),
+    },
   ]
 },
 {
